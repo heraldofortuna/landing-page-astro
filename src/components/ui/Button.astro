@@ -1,0 +1,29 @@
+---
+const { text, size = 'medium', href, onClick } = Astro.props;
+
+let buttonClasses = 'bg-primary text-white font-medium rounded-4xl transition-colors duration-200 cursor-pointer ';
+
+switch (size) {
+  case 'small':
+    buttonClasses += 'h-13 text-base leading-5 px-6';
+    break;
+  case 'medium':
+    buttonClasses += 'h-16 text-lg px-12';
+    break;
+  case 'large':
+    buttonClasses += 'h-16 text-xl px-14';
+    break;
+  default:
+    buttonClasses += 'h-13 text-base px-6';
+}
+---
+
+{href ? (
+  <a href={href} class={buttonClasses}>
+    {text}
+  </a>
+) : (
+  <button class={buttonClasses} onclick={onClick}>
+    {text}
+  </button>
+)}

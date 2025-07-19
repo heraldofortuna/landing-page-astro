@@ -1,0 +1,62 @@
+---
+import { Image } from 'astro:assets';
+import InstagramIcon from '/src/assets/instagram.svg';
+import TwitterIcon from '/src/assets/twitter.svg';
+import FacebookIcon from '/src/assets/facebook.svg';
+import Button from '../ui/Button.astro';
+---
+
+<section class="bg-gray py-16">
+  <div class="w-[90%] max-w-5xl flex items-center justify-between gap-6 m-auto">
+    <div class="flex flex-col justify-between gap-6">
+      <p>Embrace</p>
+      <ul class="flex items-center justify-center gap-12">
+        <li class="w-7 h-7 flex items-center justify-between">
+          <Image src={InstagramIcon} alt="Instagram del negocio Landing." />
+        </li>
+        <li class="w-7 h-7 flex items-center justify-between">
+          <Image src={TwitterIcon} alt="Twitter del negocio Landing." />
+        </li>
+        <li class="w-7 h-7 flex items-center justify-between">
+          <Image src={FacebookIcon} alt="Facebook del negocio Landing." />
+        </li>
+      </ul>
+      <Button text="Contact Us" />
+    </div>
+    <ul class="grid grid-cols-3 gap-12">
+      <li>
+        <p>Work With Us</p>
+      </li>
+      <li>
+        <p>Private Coaching</p>
+      </li>
+      <li>
+        <p>About Us</p>
+      </li>
+      <li>
+        <p>Advertise With Us</p>
+      </li>
+      <li>
+        <p>Our Work</p>
+      </li>
+      <li>
+        <p>FAQs</p>
+      </li>
+      <li>
+        <p>Support Us</p>
+      </li>
+      <li>
+        <p>Our Commitment</p>
+      </li>
+      <li>
+        <p>Report a Bug</p>
+      </li>
+      <li>
+        <p>Business Advices</p>
+      </li>
+      <li>
+        <p>Our Team</p>
+      </li>
+    </ul>
+  </div>
+</section>

@@ -1,1 +1,14 @@
 @import "tailwindcss";
+
+@theme {
+  --color-primary: #3461FF;
+  --color-gray: #FAFAFA;
+  --font-primary: "General Sans Medium"; 
+}
+
+@font-face {
+  font-family: 'General Sans Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('General Sans Medium'), url('/fonts/GeneralSans-Medium.woff') format('woff');
+}

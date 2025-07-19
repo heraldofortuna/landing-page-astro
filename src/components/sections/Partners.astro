@@ -1,0 +1,51 @@
+---
+import { Image } from 'astro:assets';
+import AdobeIcon from '/src/assets/adobe.svg';
+import AmazonIcon from '/src/assets/amazon.svg';
+import AsanaIcon from '/src/assets/asana.svg';
+import EvernoteIcon from '/src/assets/evernote.svg';
+import GoogleIcon from '/src/assets/google.svg';
+import MicrosoftIcon from '/src/assets/microsoft.svg';
+import PaypalIcon from '/src/assets/paypal.svg';
+import ShopifyIcon from '/src/assets/shopify.svg';
+import SpotifyIcon from '/src/assets/spotify.svg';
+import UberIcon from '/src/assets/uber.svg';
+---
+
+<section class="bg-gray py-18">
+  <div class="w-[90%] max-w-5xl flex flex-col items-center justify-between gap-24 m-auto">
+    <h2 class="text-4xl">Companies We Work With</h2>
+    <ul class="w-full grid grid-cols-5 justify-between gap-x-6 gap-y-24">
+      <li class="flex items-center justify-center">
+        <Image src={SpotifyIcon} alt="Trabajamos con Spotify." />
+      </li>
+      <li class="flex items-center justify-center">
+        <Image src={GoogleIcon} alt="Trabajamos con Spotify." />
+      </li>
+      <li class="flex items-center justify-center">
+        <Image src={UberIcon} alt="Trabajamos con Spotify." />
+      </li>
+      <li class="flex items-center justify-center">
+        <Image src={MicrosoftIcon} alt="Trabajamos con Spotify." />
+      </li>
+      <li class="flex items-center justify-center">
+        <Image src={ShopifyIcon} alt="Trabajamos con Spotify." />
+      </li>
+      <li class="flex items-center justify-center">
+        <Image src={EvernoteIcon} alt="Trabajamos con Spotify." />
+      </li>
+      <li class="flex items-center justify-center">
+        <Image src={AdobeIcon} alt="Trabajamos con Spotify." />
+      </li>
+      <li class="flex items-center justify-center">
+        <Image src={PaypalIcon} alt="Trabajamos con Spotify." />
+      </li>
+      <li class="flex items-center justify-center">
+        <Image src={AmazonIcon} alt="Trabajamos con Spotify." />
+      </li>
+      <li class="flex items-center justify-center">
+        <Image src={AsanaIcon} alt="Trabajamos con Spotify." />
+      </li>
+    </ul>
+  </div>
+</section>
