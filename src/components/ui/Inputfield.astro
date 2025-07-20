@@ -1,4 +1,6 @@
 ---
+import type { InputfieldProps } from "../../types/components";
+
 const {
   label,
   type = 'text',
@@ -10,7 +12,7 @@ const {
   disabled = false,
   error,
   onChange,
-} = Astro.props;
+} = Astro.props as InputfieldProps;
 ---
 
 <div>

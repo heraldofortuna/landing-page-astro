@@ -1,5 +1,6 @@
 ---
 import { Image } from 'astro:assets';
+import EmbraceLogoImage from '/src/assets/embrace.svg';
 import InstagramIcon from '/src/assets/instagram.svg';
 import TwitterIcon from '/src/assets/twitter.svg';
 import FacebookIcon from '/src/assets/facebook.svg';
@@ -8,8 +9,8 @@ import Button from '../ui/Button.astro';
 
 <section class="bg-gray py-16">
   <div class="w-[90%] max-w-5xl flex items-center justify-between gap-6 m-auto">
-    <div class="flex flex-col justify-between gap-6">
-      <p>Embrace</p>
+    <div class="flex flex-col justify-between gap-16">
+      <Image src={EmbraceLogoImage} height={42} alt="Logo oficial de la empresa Embrace." />
       <ul class="flex items-center justify-center gap-12">
         <li class="w-7 h-7 flex items-center justify-between">
           <Image src={InstagramIcon} alt="Instagram del negocio Landing." />

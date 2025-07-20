@@ -1,29 +1,36 @@
 ---
-const { text, size = 'medium', href, onClick } = Astro.props;
+import type { ButtonProps } from "../../types/components";
 
-let buttonClasses = 'bg-primary text-white font-medium rounded-4xl transition-colors duration-200 cursor-pointer ';
+const { text, size = 'medium', variant = 'primary', onClick } = Astro.props as ButtonProps;
+
+let buttonClasses = 'w-fit font-medium rounded-4xl transition-colors duration-200 cursor-pointer border border-transparent';
 
 switch (size) {
   case 'small':
-    buttonClasses += 'h-13 text-base leading-5 px-6';
+    buttonClasses += ' h-13 text-base leading-5 px-6';
     break;
   case 'medium':
-    buttonClasses += 'h-16 text-lg px-12';
+    buttonClasses += ' h-16 text-lg px-12';
     break;
   case 'large':
-    buttonClasses += 'h-16 text-xl px-14';
+    buttonClasses += ' h-16 text-xl px-14';
     break;
   default:
-    buttonClasses += 'h-13 text-base px-6';
+    buttonClasses += ' h-13 text-base px-6';
+}
+
+switch (variant) {
+  case 'primary':
+    buttonClasses += ' bg-primary text-white hover:bg-white hover:border-primary hover:text-primary';
+    break;
+  case 'secondary':
+    buttonClasses += ' bg-white text-black hover:bg-primary hover:border-white hover:text-white';
+    break;
+  default:
+    buttonClasses += ' bg-primary text-white hover:bg-white hover:border-primary hover:text-primary';
 }
 ---
 
-{href ? (
-  <a href={href} class={buttonClasses}>
-    {text}
-  </a>
-) : (
-  <button class={buttonClasses} onclick={onClick}>
-    {text}
-  </button>
-)}
+<button class={buttonClasses} onclick={onClick}>
+  {text}
+</button>

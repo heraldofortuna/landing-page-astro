@@ -1,0 +1,58 @@
+---
+import { Image } from 'astro:assets';
+import HowItWorksImage from '/src/assets/how-it-works.png';
+import DiscoveryIcon from '/src/assets/discovery.svg';
+import StrategyIcon from '/src/assets/strategy.svg';
+import ExecutionIcon from '/src/assets/execution.svg';
+import MeasurementIcon from '/src/assets/measurement.svg';
+---
+
+<section class="py-24">
+  <div class="max-w-5xl flex justify-between gap-24 m-auto">
+    <div class="w-1/2 flex flex-col justify-between gap-20">
+      <div class="flex flex-col gap-4">
+        <h2 class="text-6xl leading-20">How It Works</h2>
+        <p class="text-lg leading-9 opacity-60">We believe that the best way to create successful marketing campaigns is to work closely with our clients to understand their goals and challenges.</p>
+      </div>
+      <Image src={HowItWorksImage} alt="We believe that the best way to create successful marketing campaigns is to work closely with our clients to understand their goals and challenges." />
+    </div>
+    <div class="w-[600px] flex flex-col gap-10">
+      <div class="flex gap-8">
+        <div class="bg-primary w-24 min-w-24 h-24 min-h-24 flex items-center justify-center rounded-3xl">
+          <Image src={DiscoveryIcon} alt="We meet with you to learn about your business, your goals, and your target audience." />
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="text-3xl leading-10">Discovery</h3>
+          <p class="leading-8 opacity-60">We meet with you to learn about your business, your goals, and your target audience.</p>
+        </div>
+      </div>
+      <div class="flex gap-8">
+        <div class="bg-primary w-24 min-w-24 h-24 min-h-24 flex items-center justify-center rounded-3xl">
+          <Image src={StrategyIcon} alt="We meet with you to learn about your business, your goals, and your target audience." />
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="text-3xl leading-10">Strategy</h3>
+          <p class="leading-8 opacity-60">We develop a customized marketing strategy that is based on your unique needs and goals.</p>
+        </div>
+      </div>
+      <div class="flex gap-8">
+        <div class="bg-primary w-24 min-w-24 h-24 min-h-24 flex items-center justify-center rounded-3xl">
+          <Image src={ExecutionIcon} alt="We meet with you to learn about your business, your goals, and your target audience." />
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="text-3xl leading-10">Execution</h3>
+          <p class="leading-8 opacity-60">We execute our strategy using the latest digital marketing tools and techniques.</p>
+        </div>
+      </div>
+      <div class="flex gap-8">
+        <div class="bg-primary w-24 min-w-24 h-24 min-h-24 flex items-center justify-center rounded-3xl">
+          <Image src={MeasurementIcon} alt="We meet with you to learn about your business, your goals, and your target audience." />
+        </div>
+        <div class="flex flex-col gap-3">
+          <h3 class="text-3xl leading-10">Measurement</h3>
+          <p class="leading-8 opacity-60">We track the results of our campaigns so that we can make adjustments as needed.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+import Button from "../ui/Button.astro";
+import Inputfield from "../ui/Inputfield.astro";
+import RightArrowBlueIcon from '/src/assets/right-arrow-blue.svg';
+---
+
+<section class="py-36">
+  <div class="max-w-5xl flex justify-between gap-24 m-auto">
+    <div>
+
+    </div>
+    <div class="flex flex-col gap-10">
+      <div class="flex flex-col gap-8">
+        <div class="flex flex-col gap-4">
+          <h2 class="text-5xl leading-12">How We Can Help You?</h2>
+          <p class="text-xl opacity-60">Follow our newsletter. We will regulary update our latest project and availability.</p>
+        </div>
+        <div class="flex items-center gap-2">
+          <Inputfield type="email" name="email" placeholder="Enter your Email" />
+          <Button text="Lets Talk" />
+        </div>
+      </div>
+      <div class="text-primary flex items-center gap-2 cursor-pointer">
+        <p class="text-xl font-semibold underline leading-6">More FAQ</p>
+        <span class="flex items-center justify-center">
+          <Image src={RightArrowBlueIcon} alt="Learn More." />
+        </span>
+      </div>
+    </div>
+  </div>
+</section>

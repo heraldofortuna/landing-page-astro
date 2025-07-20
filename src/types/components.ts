@@ -1,16 +1,17 @@
+type ButtonSize = 'small' | 'medium' | 'large';
 type ButtonVariant = 'primary' | 'secondary' | 'outline';
 
-interface ButtonProps {
+export interface ButtonProps {
   text: string;
+  size?: ButtonSize;
   variant?: ButtonVariant;
-  href?: string;
-  onClick?: () => void;
+  onClick?: string | null | undefined;
 }
 
 type InputfieldType = 'text' | 'email' | 'password' | 'number' | 'date';
 type InputfieldValue = string | number;
 
-interface InputfieldProps {
+export interface InputfieldProps {
   label?: string;
   type?: InputfieldType;
   name: string;
@@ -20,5 +21,5 @@ interface InputfieldProps {
   required?: boolean;
   disabled?: boolean;
   error?: string;
-  onChange?: (event: Event) => void;
+  onChange?: string | null | undefined;
 }
