@@ -9,9 +9,9 @@ import TeammateImage6 from '/src/assets/teammate-6.png';
 import Button from '../ui/Button.astro';
 ---
 
-<section class="bg-gray py-32">
-  <div class="w-[90%] max-w-[1200px] flex justify-between gap-12 m-auto">
-    <div class="w-1/2 grid grid-cols-3 gap-5">
+<section class="bg-gray py-16 md:py-32">
+  <div class="w-[90%] max-w-[1200px] flex flex-col-reverse md:flex-row justify-between gap-12 m-auto">
+    <div class="w-full md:w-1/2 grid grid-cols-2 md:grid-cols-3 gap-5">
       <Image src={TeammateImage1} alt="Miembro 1 del equipo de trabajo." />
       <Image src={TeammateImage2} alt="Miembro 2 del equipo de trabajo." />
       <Image src={TeammateImage3} alt="Miembro 3 del equipo de trabajo." />
@@ -19,10 +19,10 @@ import Button from '../ui/Button.astro';
       <Image src={TeammateImage5} alt="Miembro 4 del equipo de trabajo." />
       <Image src={TeammateImage6} alt="Miembro 5 del equipo de trabajo." />
     </div>
-    <div class="w-1/2 flex flex-col gap-6 justify-between">
-      <div class="flex flex-col gap-6">
-        <h2 class="text-6xl">Meet Our Team</h2>
-        <p class="opacity-60">Discover the brilliance behind Embrace. Our team blends innovation and artistry to craft digital wonders that captivate</p>
+    <div class="w-full md:w-1/2 flex flex-col items-center md:items-baseline justify-between gap-6">
+      <div class="flex flex-col gap-6 text-center md:text-left">
+        <h2 class="text-5xl md:text-6xl">Meet Our Team</h2>
+        <p class="font-regular text-gray-dark leading-6 md:leading-8">Discover the brilliance behind Embrace. Our team blends innovation and artistry to craft digital wonders that captivate</p>
       </div>
       <Button text="Learn More" />
     </div>

@@ -26,14 +26,14 @@ const answerId = `answer-${props.question.toLowerCase().replace(/\s+/g, '-')}`;
 </script>
 
 <template>
-  <div class="py-8 border-b border-neutral-200">
+  <div class="border-b border-neutral-200 cursor-pointer">
     <button
       @click="toggleAccordion"
-      class="flex justify-between items-center w-full text-left"
+      class="flex justify-between items-center w-full text-left py-6 md:py-8 cursor-pointer"
       :aria-expanded="isOpen"
       :aria-controls="answerId"
     >
-      <span class="text-xl leading-9 hover:text-primary-600 transition-colors">
+      <span class="text-lg md:text-xl leading-9 hover:text-primary-600 transition-colors">
         {{ question }}
       </span>
       <svg
@@ -55,7 +55,7 @@ const answerId = `answer-${props.question.toLowerCase().replace(/\s+/g, '-')}`;
       }"
       :aria-hidden="!isOpen"
     >
-      <div class="text-neutral-600 pt-8">
+      <div class="text-gray-dark pb-6 md:pb-8">
         <slot name="answer">{{ answer }}</slot>
       </div>
     </div>

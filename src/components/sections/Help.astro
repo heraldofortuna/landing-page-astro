@@ -21,8 +21,8 @@ const faqs = [
 ];
 ---
 
-<section class="py-36">
-  <div class="max-w-[1200px] flex justify-between gap-24 m-auto">
+<section class="py-18 md:py-36">
+  <div class="w-[90%] max-w-[1200px] flex flex-col-reverse md:flex-row justify-between gap-12 md:gap-24 m-auto">
     <ul class="border-t border-neutral-200">
       {faqs.map((faq) => (
         <li>
@@ -38,15 +38,15 @@ const faqs = [
     <div class="flex flex-col gap-10">
       <div class="flex flex-col gap-8">
         <div class="flex flex-col gap-4">
-          <h2 class="text-5xl leading-12">How We Can Help You?</h2>
-          <p class="text-xl opacity-60">Follow our newsletter. We will regulary update our latest project and availability.</p>
+          <h2 class="text-4xl md:text-5xl text-center md:text-left leading-10 md:leading-12">How We Can Help You?</h2>
+          <p class="text-lg md:text-xl text-gray-dark opacity-75 text-center md:text-left">Follow our newsletter. We will regulary update our latest project and availability.</p>
         </div>
-        <div class="flex items-center gap-2">
+        <div class="flex md:flex-wrap lg:flex-nowrap items-center md:items-baseline justify-center md:justify-baseline gap-2">
           <Inputfield type="email" name="email" placeholder="Enter your Email" />
           <Button text="Lets Talk" />
         </div>
       </div>
-      <div class="text-primary flex items-center gap-2 cursor-pointer">
+      <div class="hidden text-primary md:flex items-center gap-2 cursor-pointer">
         <p class="text-xl font-semibold underline leading-6">More FAQ</p>
         <span class="flex items-center justify-center">
           <Image src={RightArrowBlueIcon} alt="Learn More." />

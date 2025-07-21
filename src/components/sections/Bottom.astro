@@ -7,55 +7,55 @@ import FacebookIcon from '/src/assets/facebook.svg';
 import Button from '../ui/Button.astro';
 ---
 
-<section class="bg-gray py-16">
-  <div class="w-[90%] max-w-[1200px] flex items-center justify-between gap-6 m-auto">
+<section class="bg-gray py-12 md:py-16">
+  <div class="w-[90%] max-w-[1200px] flex flex-col md:flex-row items-center justify-between gap-12 m-auto">
     <div class="flex flex-col justify-between gap-16">
       <Image src={EmbraceLogoImage} height={42} alt="Logo oficial de la empresa Embrace." />
       <ul class="flex items-center justify-center gap-12">
-        <li class="w-7 h-7 flex items-center justify-between">
+        <li class="w-7 h-7 flex items-center justify-between cursor-pointer hover:opacity-60 transition-all duration-200">
           <Image src={InstagramIcon} alt="Instagram del negocio Landing." />
         </li>
-        <li class="w-7 h-7 flex items-center justify-between">
+        <li class="w-7 h-7 flex items-center justify-between cursor-pointer hover:opacity-60 transition-all duration-200">
           <Image src={TwitterIcon} alt="Twitter del negocio Landing." />
         </li>
-        <li class="w-7 h-7 flex items-center justify-between">
+        <li class="w-7 h-7 flex items-center justify-between cursor-pointer hover:opacity-60 transition-all duration-200">
           <Image src={FacebookIcon} alt="Facebook del negocio Landing." />
         </li>
       </ul>
       <Button text="Contact Us" />
     </div>
-    <ul class="grid grid-cols-3 gap-12">
-      <li>
+    <ul class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
+      <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">
         <p>Work With Us</p>
       </li>
-      <li>
+      <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">
         <p>Private Coaching</p>
       </li>
-      <li>
+      <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">
         <p>About Us</p>
       </li>
-      <li>
+      <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">
         <p>Advertise With Us</p>
       </li>
-      <li>
+      <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">
         <p>Our Work</p>
       </li>
-      <li>
+      <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">
         <p>FAQs</p>
       </li>
-      <li>
+      <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">
         <p>Support Us</p>
       </li>
-      <li>
+      <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">
         <p>Our Commitment</p>
       </li>
-      <li>
+      <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">
         <p>Report a Bug</p>
       </li>
-      <li>
+      <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">
         <p>Business Advices</p>
       </li>
-      <li>
+      <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">
         <p>Our Team</p>
       </li>
     </ul>

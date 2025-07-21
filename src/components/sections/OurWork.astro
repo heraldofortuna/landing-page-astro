@@ -6,24 +6,24 @@ import NikeWorkImage from '/src/assets/nike-work.png';
 import Button from '../ui/Button.astro';
 ---
 
-<section class="py-32">
-  <div class="max-w-[1200px] flex flex-col gap-12 m-auto">
-    <div class="w-full flex flex-col gap-3 text-center">
-      <h2 class="text-6xl leading-20">Our Work</h2>
-      <p class="text-lg leading-8 opacity-60">A glimpse of our portfolio</p>
+<section class="py-16 md:py-32">
+  <div class="w-[90%] max-w-[1200px] flex flex-col gap-8 md:gap-12 m-auto">
+    <div class="w-full flex flex-col gap2 md:gap-3 text-center">
+      <h2 class="text-4xl md:text-6xl leading-16 md:leading-20">Our Work</h2>
+      <p class="text-base md:text-lg text-gray-dark leading-8 md:leading-9">A glimpse of our portfolio</p>
     </div>
-    <div class="grid grid-cols-3 gap-5">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-5">
       <div class="flex flex-col items-center justify-center gap-4">
         <Image src={AppleWorkImage} alt="Trabajo hecho para Apple." />
-        <h3 class="text-3xl leading-10">Apple</h3>
+        <h3 class="text-2xl md:text-3xl leading-8 md:leading-10">Apple</h3>
       </div>
       <div class="flex flex-col items-center justify-center gap-4">
         <Image src={CocaColaWorkImage} alt="Trabajo hecho para Coca Cola." />
-        <h3 class="text-3xl leading-10">Coca-Cola</h3>
+        <h3 class="text-2xl md:text-3xl leading-8 md:leading-10">Coca-Cola</h3>
       </div>
       <div class="flex flex-col items-center justify-center gap-4">
         <Image src={NikeWorkImage} alt="Trabajo hecho para Nike." />
-        <h3 class="text-3xl leading-10">Nike</h3>
+        <h3 class="text-2xl md:text-3xl leading-8 md:leading-10">Nike</h3>
       </div>
     </div>
     <div class="w-full flex items-center justify-center">

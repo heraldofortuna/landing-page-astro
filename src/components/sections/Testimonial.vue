@@ -59,7 +59,7 @@ onMounted(() => {
           <!-- Navigation Arrows -->
           <button
             @click="prevSlide"
-            class="bg-primary h-20 w-20 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors cursor-pointer"
+            class="bg-primary h-20 w-20 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
             aria-label="Previous testimonial"
           >
             <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -68,7 +68,7 @@ onMounted(() => {
           </button>
           <button
             @click="nextSlide"
-            class="bg-primary h-20 w-20 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors cursor-pointer"
+            class="bg-primary h-20 w-20 flex items-center justify-center rounded-full hover:bg-gray-100 transition-colors duration-200 cursor-pointer"
             aria-label="Next testimonial"
           >
             <svg class="w-6 h-6 text-gray-800 dark:text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -102,7 +102,7 @@ onMounted(() => {
             v-for="(_, index) in testimonials"
             :key="index"
             @click="goToSlide(index)"
-            class="w-3 h-3 rounded-full transition-colors"
+            class="w-3 h-3 rounded-full transition-colors duration-200"
             :class="{
               'bg-primary-600 dark:bg-primary-400': index === currentIndex,
               'bg-gray-300 dark:bg-gray-600': index !== currentIndex
