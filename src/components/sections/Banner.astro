@@ -1,5 +1,5 @@
 ---
-import Button from "../ui/Button.astro";
+import Button from "../ui/Button.vue";
 ---
 
 <section class="py-12 md:py-25">
@@ -8,7 +8,7 @@ import Button from "../ui/Button.astro";
       <h2 class="text-4xl md:text-6xl">Elevate Your Brand Today!</h2>
       <div class="flex flex-col items-center md:items-start gap-6 md:gap-8">
         <p class="text-lg md:text-xl">Ready to transform your digital dresence? Let's create magic together! book our services now!</p>
-        <Button text="Book Call" variant="secondary" />
+        <Button client:visible text="Book Call" variant="secondary" />
       </div>
     </div>
   </div>

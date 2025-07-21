@@ -4,7 +4,7 @@ import EmbraceLogoImage from '/src/assets/embrace.svg';
 import InstagramIcon from '/src/assets/instagram.svg';
 import TwitterIcon from '/src/assets/twitter.svg';
 import FacebookIcon from '/src/assets/facebook.svg';
-import Button from '../ui/Button.astro';
+import Button from '../ui/Button.vue';
 ---
 
 <section class="bg-gray py-12 md:py-16">
@@ -22,7 +22,7 @@ import Button from '../ui/Button.astro';
           <Image src={FacebookIcon} alt="Facebook del negocio Landing." />
         </li>
       </ul>
-      <Button text="Contact Us" />
+      <Button client:visible text="Contact Us" />
     </div>
     <ul class="grid grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
       <li class="hover:underline transition-all duration-200 cursor-pointer whitespace-nowrap">

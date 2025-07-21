@@ -1,6 +1,6 @@
 <template>
-  <section class="py-16 lg:py-20">
-    <div class="w-[90%] max-w-[1200px] lg:max-h-[500px] flex flex-col lg:flex-row items-center justify-between gap-14 m-auto">
+  <section class="py-16 lg:py-30">
+    <div class="w-[90%] max-w-[1200px] lg:max-h-[800px] flex flex-col lg:flex-row items-center justify-between gap-14 m-auto">
       <div class="w-full lg:w-1/2 flex flex-col gap-11">
         <div class="flex flex-col gap-7">
           <h1 class="text-6xl lg:text-8xl text-center lg:text-left font-semibold">We Take Care Of Your Brand</h1>

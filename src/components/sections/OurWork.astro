@@ -3,7 +3,7 @@ import { Image } from 'astro:assets';
 import AppleWorkImage from '/src/assets/apple-work.png';
 import CocaColaWorkImage from '/src/assets/coca-cola-work.png';
 import NikeWorkImage from '/src/assets/nike-work.png';
-import Button from '../ui/Button.astro';
+import Button from '../ui/Button.vue';
 ---
 
 <section class="py-16 md:py-32">
@@ -27,7 +27,7 @@ import Button from '../ui/Button.astro';
       </div>
     </div>
     <div class="w-full flex items-center justify-center">
-      <Button text="See More" />
+      <Button client:visible text="See More" />
     </div>
   </div>
 </section>

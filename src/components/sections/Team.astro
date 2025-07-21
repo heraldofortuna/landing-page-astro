@@ -6,7 +6,7 @@ import TeammateImage3 from '/src/assets/teammate-3.png';
 import TeammateImage4 from '/src/assets/teammate-4.png';
 import TeammateImage5 from '/src/assets/teammate-5.png';
 import TeammateImage6 from '/src/assets/teammate-6.png';
-import Button from '../ui/Button.astro';
+import Button from '../ui/Button.vue';
 ---
 
 <section class="bg-gray py-16 md:py-32">
@@ -24,7 +24,7 @@ import Button from '../ui/Button.astro';
         <h2 class="text-5xl md:text-6xl">Meet Our Team</h2>
         <p class="font-regular text-gray-dark leading-6 md:leading-8">Discover the brilliance behind Embrace. Our team blends innovation and artistry to craft digital wonders that captivate</p>
       </div>
-      <Button text="Learn More" />
+      <Button client:visible text="Learn More" />
     </div>
   </div>
 </section>

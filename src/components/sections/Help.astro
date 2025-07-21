@@ -1,7 +1,7 @@
 ---
 import { Image } from 'astro:assets';
 import RightArrowBlueIcon from '/src/assets/right-arrow-blue.svg';
-import Button from "../ui/Button.astro";
+import Button from "../ui/Button.vue";
 import Inputfield from "../ui/Inputfield.astro";
 import FAQItem from '../ui/FAQItem.vue';
 
@@ -43,7 +43,7 @@ const faqs = [
         </div>
         <div class="flex md:flex-wrap lg:flex-nowrap items-center md:items-start justify-center md:justify-start gap-2">
           <Inputfield type="email" name="email" placeholder="Enter your Email" />
-          <Button text="Lets Talk" />
+          <Button client:visible text="Lets Talk" />
         </div>
       </div>
       <div class="hidden text-primary md:flex items-center gap-2 cursor-pointer">
