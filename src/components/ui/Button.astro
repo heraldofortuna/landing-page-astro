@@ -3,7 +3,7 @@ import type { ButtonProps } from "../../types/components";
 
 const { text, size = 'medium', variant = 'primary', onClick } = Astro.props as ButtonProps;
 
-let buttonClasses = 'w-fit font-medium rounded-4xl transition-colors duration-200 cursor-pointer border border-transparent';
+let buttonClasses = 'w-fit font-medium rounded-4xl transition-colors duration-200 cursor-pointer border';
 
 switch (size) {
   case 'small':
@@ -21,10 +21,10 @@ switch (size) {
 
 switch (variant) {
   case 'primary':
-    buttonClasses += ' bg-primary text-white hover:bg-white hover:border-primary hover:text-primary';
+    buttonClasses += ' bg-primary text-white border-primary hover:bg-white hover:border-primary hover:text-primary';
     break;
   case 'secondary':
-    buttonClasses += ' bg-white text-black hover:bg-primary hover:border-white hover:text-white';
+    buttonClasses += ' bg-white text-black border-primary hover:bg-primary hover:border-white hover:text-white';
     break;
   default:
     buttonClasses += ' bg-primary text-white hover:bg-white hover:border-primary hover:text-primary';

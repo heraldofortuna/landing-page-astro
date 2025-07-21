@@ -23,3 +23,8 @@ export interface InputfieldProps {
   error?: string;
   onChange?: string | null | undefined;
 }
+
+export interface SwitchOption {
+  value: string;
+  label: string;
+}

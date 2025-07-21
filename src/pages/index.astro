@@ -5,7 +5,7 @@ import Commitments from '../components/sections/Commitments.astro';
 import Footer from '../components/sections/Footer.astro';
 import Header from '../components/sections/Header.astro';
 import Help from '../components/sections/Help.astro';
-import Hero from '../components/sections/Hero.astro';
+import Hero from '../components/sections/Hero.vue';
 import HowItWorks from '../components/sections/HowItWorks.astro';
 import OurWork from '../components/sections/OurWork.astro';
 import Partners from '../components/sections/Partners.astro';
@@ -17,14 +17,14 @@ import "../styles/global.css";
 
 <Layout title="Embrace" description="Nosotros cuidamos de tu marca.">
 	<Header />
-	<Hero />
+	<Hero client:only />
 	<Partners />
 	<Commitments />
 	<HowItWorks />
 	<OurWork />
 	<Banner />
 	<Team />
-	<Testimonial client:load />
+	<!-- <Testimonial client:load /> -->
 	<Help />
 	<Bottom />
 	<Footer />

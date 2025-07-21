@@ -1,30 +1,3 @@
-<script setup lang="ts">
-import { ref } from 'vue';
-
-const props = defineProps({
-  question: {
-    type: String,
-    required: true
-  },
-  answer: {
-    type: String,
-    required: true
-  },
-  defaultOpen: {
-    type: Boolean,
-    default: false
-  }
-});
-
-const isOpen = ref<boolean>(props.defaultOpen);
-
-const toggleAccordion = () => {
-  isOpen.value = !isOpen.value;
-};
-
-const answerId = `answer-${props.question.toLowerCase().replace(/\s+/g, '-')}`;
-</script>
-
 <template>
   <div class="border-b border-neutral-200 cursor-pointer">
     <button
@@ -61,3 +34,30 @@ const answerId = `answer-${props.question.toLowerCase().replace(/\s+/g, '-')}`;
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+
+const props = defineProps({
+  question: {
+    type: String,
+    required: true
+  },
+  answer: {
+    type: String,
+    required: true
+  },
+  defaultOpen: {
+    type: Boolean,
+    default: false
+  }
+});
+
+const isOpen = ref<boolean>(props.defaultOpen);
+
+const toggleAccordion = () => {
+  isOpen.value = !isOpen.value;
+};
+
+const answerId = `answer-${props.question.toLowerCase().replace(/\s+/g, '-')}`;
+</script>
