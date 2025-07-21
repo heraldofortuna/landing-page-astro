@@ -3,6 +3,7 @@
 @theme {
   --color-primary: #3461FF;
   --color-gray: #FAFAFA;
+  --color-gray-light: #F8F9FF;
   --color-dark-blue: #232038;
   --font-primary: "General Sans Medium"; 
 }
