@@ -43,7 +43,13 @@ npm run test
 
 El proyecto se puso a prueba en Lighthouse y estos fueron los resultados obtenidos:
 
-![Project Score](./src/assets/lighthouse.mp4)
+![Project Score](./src/assets/lighthouse.gif)
+
+## 📈 Rendimiento
+
+Se realizó el tracking del número de clicks que se da al botón de 'Book Call' con el fin de poder tener la métrica de posibles conversiones.
+
+![Project Score](./src/assets/gtm.png)
 
 ## 🛠️ Construido con
 
