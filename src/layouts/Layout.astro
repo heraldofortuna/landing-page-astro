@@ -1,4 +1,8 @@
 ---
+import GTM from "../components/analytics/GTM.astro";
+import ScrollTracking from "../components/analytics/ScrollTracking.astro";
+import TimeTracking from "../components/analytics/TimeTracking.astro";
+
 const { title, description } = Astro.props;
 ---
 
@@ -15,10 +19,20 @@ const { title, description } = Astro.props;
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
 		{description && <meta name="description" content={description} />}
+		<!-- Configuración GTM -->
+		<GTM />
+		<!-- Eventos personalizados -->
+		<ScrollTracking />
+		<TimeTracking />
 	</head>
 	<body>
 		<slot />
 	</body>
+
+	<!-- Google Tag Manager (noscript) -->
+	<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NNX3HLJM"
+	height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 </html>
 
 <style>

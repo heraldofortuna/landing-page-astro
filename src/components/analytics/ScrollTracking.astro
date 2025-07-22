@@ -1,0 +1,18 @@
+<script is:inline>
+document.addEventListener('DOMContentLoaded', () => {
+  const trackScroll = () => {
+    const scrollPercentage = 
+      (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+    
+    if (scrollPercentage > 75 && !sessionStorage.getItem('scrolled75')) {
+      dataLayer.push({
+        event: 'scrollEvent',
+        scrollDepth: '75%'
+      });
+      sessionStorage.setItem('scrolled75', 'true');
+    }
+  };
+
+  window.addEventListener('scroll', trackScroll);
+});
+</script>
