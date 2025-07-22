@@ -1,5 +1,6 @@
 <template>
-  <button 
+  <button
+    id="btn-book-call"
     :class="buttonClasses" 
     @click="handleClick"
   >
@@ -23,7 +24,6 @@ const emit = defineEmits<{
 const buttonClasses = computed(() => {
   let classes = 'w-fit font-medium rounded-4xl transition-colors duration-200 cursor-pointer border';
   
-  // Tamaño
   switch (props.size) {
     case 'small':
       classes += ' h-12 md:h-13 text-sm md:text-base leading-5 px-5 md:px-6';
@@ -38,7 +38,6 @@ const buttonClasses = computed(() => {
       classes += ' h-12 md:h-13 text-sm md:text-base leading-5 px-5 md:px-6';
   }
 
-  // Variante
   switch (props.variant) {
     case 'primary':
       classes += ' bg-primary text-white border-primary hover:bg-white hover:border-primary hover:text-primary';
