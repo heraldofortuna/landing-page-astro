@@ -1,8 +1,9 @@
 <template>
   <button
-    id="btn-book-call"
+    :id="id"
     :class="buttonClasses" 
     @click="handleClick"
+    :disabled="disabled"
   >
     <span class="w-full whitespace-nowrap">{{ text }}</span>
   </button>
@@ -13,8 +14,10 @@ import { computed } from "vue";
 import type { ButtonProps } from "../../types/components";
 
 const props = withDefaults(defineProps<ButtonProps>(), {
+  id: '',
   size: 'medium',
-  variant: 'primary'
+  variant: 'primary',
+  disabled: false
 });
 
 const emit = defineEmits<{
@@ -22,7 +25,9 @@ const emit = defineEmits<{
 }>();
 
 const buttonClasses = computed(() => {
-  let classes = 'w-fit font-medium rounded-4xl transition-colors duration-200 cursor-pointer border';
+  let classes = 'w-fit font-medium rounded-4xl transition-colors duration-200 border';
+  
+  classes += props.disabled ? ' cursor-not-allowed' : ' cursor-pointer';
   
   switch (props.size) {
     case 'small':
@@ -40,19 +45,27 @@ const buttonClasses = computed(() => {
 
   switch (props.variant) {
     case 'primary':
-      classes += ' bg-primary text-white border-primary hover:bg-white hover:border-primary hover:text-primary';
+      classes += props.disabled 
+        ? ' bg-gray-200 text-gray-500 border-gray-300' 
+        : ' bg-primary text-white border-primary hover:bg-white hover:border-primary hover:text-primary';
       break;
     case 'secondary':
-      classes += ' bg-white text-black border-primary hover:bg-primary hover:border-white hover:text-white';
+      classes += props.disabled
+        ? ' bg-gray-300 text-gray-400 border-gray-300'
+        : ' bg-white text-black border-primary hover:bg-primary hover:border-white hover:text-white';
       break;
     default:
-      classes += ' bg-primary text-white hover:bg-white hover:border-primary hover:text-primary';
+      classes += props.disabled
+        ? ' bg-gray-300 text-gray-500 border-gray-300'
+        : ' bg-primary text-white hover:bg-white hover:border-primary hover:text-primary';
   }
 
   return classes;
 });
 
 const handleClick = () => {
-  emit('click');
+  if (!props.disabled) {
+    emit('click');
+  }
 };
 </script>

@@ -1,0 +1,21 @@
+---
+import HeroImage from '/src/assets/hero.png';
+import Button from '../ui/Button.vue';
+---
+
+<section class="py-16 lg:py-30">
+  <div class="w-[90%] max-w-[1200px] lg:max-h-[800px] flex flex-col lg:flex-row items-center justify-between gap-14 m-auto">
+    <div class="w-full lg:w-1/2 flex flex-col gap-8">
+      <div class="flex flex-col gap-7">
+        <h1 class="text-6xl lg:text-8xl text-center lg:text-left font-semibold">We Take Care Of Your Brand</h1>
+        <p class="text-lg lg:text-xl text-gray-dark text-center lg:text-left">We care about our work and we care about our clients.</p>
+      </div>
+      <a class="flex items-center justify-center lg:justify-start gap-3" href="#book-call">
+        <Button text="Lets Talk" />
+      </a>
+    </div>
+    <div class="w-full lg:w-1/2 flex items-center justify-center">
+      <img src={HeroImage.src} class="max-h-[600px]" alt="We Take Care of Your Brand." />
+    </div>
+  </div>
+</section>

@@ -2,9 +2,11 @@ type ButtonSize = 'small' | 'medium' | 'large';
 type ButtonVariant = 'primary' | 'secondary' | 'outline';
 
 export interface ButtonProps {
+  id?: string;
   text: string;
   size?: ButtonSize;
   variant?: ButtonVariant;
+  disabled?: boolean;
   onClick?: string | null | undefined;
 }
 
@@ -17,11 +19,10 @@ export interface InputfieldProps {
   name: string;
   id?: string;
   placeholder?: string;
-  value?: InputfieldValue;
+  modelValue?: InputfieldValue;
   required?: boolean;
   disabled?: boolean;
   error?: string;
-  onChange?: string | null | undefined;
 }
 
 export interface SwitchOption {

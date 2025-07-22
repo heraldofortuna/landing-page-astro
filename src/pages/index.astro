@@ -1,11 +1,11 @@
 ---
-import Banner from '../components/sections/Banner.astro';
+import Banner from '../components/sections/Banner.vue';
 import Bottom from '../components/sections/Bottom.astro';
 import Commitments from '../components/sections/Commitments.astro';
 import Footer from '../components/sections/Footer.astro';
 import Header from '../components/sections/Header.vue';
 import Help from '../components/sections/Help.astro';
-import Hero from '../components/sections/Hero.vue';
+import Hero from '../components/sections/Hero.astro';
 import HowItWorks from '../components/sections/HowItWorks.astro';
 import OurWork from '../components/sections/OurWork.astro';
 import Partners from '../components/sections/Partners.astro';
@@ -16,12 +16,12 @@ import "../styles/global.css";
 
 <Layout title="Embrace" description="Nosotros cuidamos de tu marca.">
 	<Header client:load />
-	<Hero client:only />
+	<Hero />
 	<Partners />
 	<Commitments />
 	<HowItWorks />
 	<OurWork />
-	<Banner />
+	<Banner client:visible />
 	<Team />
 	<Help />
 	<Bottom />

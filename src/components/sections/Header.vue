@@ -18,9 +18,9 @@
       </div>
       
       <!-- Botón Book A Call (desktop) -->
-      <div class="hidden md:block">
+      <a class="hidden md:block" href="#book-call">
         <Button text="Book A Call" size="small" />
-      </div>
+      </a>
     </div>
 
     <!-- Overlay con fade -->
@@ -57,9 +57,9 @@
           </li>
         </ul>
         
-        <div class="mt-8">
+        <a class="block mt-8" href="#book-call" @click="closeMenu">
           <Button text="Book A Call" />
-        </div>
+        </a>
       </div>
     </Transition>
   </header>
